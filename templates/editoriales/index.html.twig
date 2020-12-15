@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listado de Editoriales{% endblock %}
+
+{% block body %}
+    <div class="text-center">
+    </div>
+    <div class="fixer">
+        <div class="card">
+            <div class="card-header">
+                Listado de Editoriales
+                <a class="btn btn-sm btn-danger float-right" href="{{ path('editoriales_crear') }}">Crear nuevo</a>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm table-bordered">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Sede</th>
+                        <th>Opciones</th>
+                    </tr>
+                    {% for x in data %}
+                        <tr>
+                            <td>{{ x.nombre }}</td>
+                            <td>{{ x.sede }}</td>
+                            <td>
+                                <a href="{{ path('editoriales_crear', {id: x.id}) }}">Editar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

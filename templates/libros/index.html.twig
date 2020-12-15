@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listado de Libros{% endblock %}
+
+{% block body %}
+    <div class="text-center">
+    </div>
+    <div class="fixer">
+        <div class="card">
+            <div class="card-header">
+                Listado de Libros
+                <a class="btn btn-sm btn-danger float-right" href="{{ path('libros_crear') }}">Crear nuevo</a>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm table-bordered">
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Titulo</th>
+                        <th>Sinopsis</th>
+                        <th>Páginas</th>
+                        <th>Opciones</th>
+                    </tr>
+                    {% for x in data %}
+                        <tr>
+                            <td>{{ x.isbn }}</td>
+                            <td>{{ x.titulo }}</td>
+                            <td>{{ x.sinopsis }}</td>
+                            <td>{{ x.nPaginas }}</td>
+                            <td>
+                                <a href="{{ path('libros_crear', {id: x.isbn}) }}">Editar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

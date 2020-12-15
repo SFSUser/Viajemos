@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editor de elementos{% endblock %}
+
+{% block body %}
+    <div class="fixer">
+        <div class="card">
+            <div class="card-header">
+                Editar o crear elemento
+                <button class="btn btn-sm float-right btn-success" onclick="history.back()">Volver</button>
+            </div>
+            <div class="card-body">
+                {{ form(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,133 @@
+/**
+    ESTILO DE TABLA PREDETERMINADA DEL SISTEMA
+ */
+
+.table-items{
+    width: 100%;
+    font-size: 13px;
+}
+.table-items th{
+    background-color: #b1e7d1;
+}
+.table-items td{
+    border-bottom: 1px #b1e7d1 solid;
+}
+.table-items thead, .table-items tbody{
+    display: block;
+}
+.table-items tbody{
+    min-height: 200px;
+    overflow: auto;
+}
+.table-items tbody tr, .table-items thead{
+    display: table;
+    width:100%;
+    table-layout:fixed;
+}
+.table-items select, .table-items input, .table-items textarea{
+    border-radius: 5px;
+    max-width: 80px;
+}
+
+/**
+    RECUADRO GENERICO
+ */
+.box {
+    background: white;
+    max-width: 800px;
+    padding: 10px;
+    border: gainsboro 1px solid;
+	margin-bottom: 50px;
+}
+.fixer{
+    margin: auto;
+    margin-top: 10px;
+}
+
+.box-bordered{
+    border: #005c4f 1px dashed;
+    border-radius: 10px;
+}
+
+/**
+    PARA SEPARAR POR COLUMNAS
+ */
+.pos-col {
+    display: flex;
+}
+.pos-col > div{
+    flex-grow: 1;
+    padding: 5px;
+}
+
+@media all and (max-width: 500px) {
+    .pos-col{
+        display: block;
+    }
+}
+/**
+    PARA LOS DIFERENTES CONTROLES DEL FORMULARIO
+ */
+form>div>div {
+    display: flex;
+    margin-bottom: 5px;
+}
+.form-input, form>div>div textarea, form>div>div input, form>div>div select {
+    flex-grow: 1;
+    border: gainsboro 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+form>div>div button {
+    border: gainsboro 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+form>div>div label{
+    padding: 5px 10px 5px 5px;
+}
+form ul{
+    color: red;
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+}
+/**
+    ESTILOS DE DIFERENTES TIPOS DE BOTONES
+ */
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-info {
+    color: white;
+    background-color: #3396bd;
+}
+.btn-info:hover{
+    background-color: #236a87;
+    transition: 0.3s;
+}
+.btn-success {
+    color: white;
+    background-color: #71b501;
+}
+.btn-success:hover{
+    background-color: #528601;
+    transition: 0.3s;
+}
+.btn-default {
+    color: white;
+    background-color: #ada9a3;
+}
+.btn-default:hover{
+    background-color: #8e8a84;
+    transition: 0.3s;
+}
+
+.busy {
+    opacity: 0.3;
+}
